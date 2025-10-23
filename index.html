@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>App Support</title>
+  <meta name="description" content="Support page for the mobile application. Contact and FAQs.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230066ff'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial' font-size='28' fill='white'%3E?%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { --bg:#0b1220; --panel:#121a2b; --text:#e6ecff; --muted:#a5b4d6; --link:#86b7ff; --accent:#2f80ff; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, #1b2a4a 0%, #0b1220 60%);
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .card{
+      width:min(880px, 100%);
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 20px 60px rgba(0,0,0,.4), inset 0 0 0 1px rgba(255,255,255,.04);
+      border-radius:24px; padding:28px;
+      backdrop-filter:saturate(1.1) blur(4px);
+    }
+    h1{margin:0 0 8px; font-size:28px; letter-spacing:.2px}
+    .subtitle{margin:0 0 20px; color:var(--muted)}
+    .grid{display:grid; grid-template-columns:1fr; gap:18px}
+    .row{background:var(--panel); border:1px solid rgba(255,255,255,0.06); border-radius:16px; padding:16px}
+    .row h2{margin:0 0 8px; font-size:18px}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .pill{display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--muted); font-size:12px}
+    footer{margin-top:14px; color:var(--muted); font-size:12px}
+    .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:var(--accent); color:white; text-decoration:none; font-weight:600}
+    code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px; background:rgba(255,255,255,.06); padding:2px 6px; border-radius:6px}
+    ul{margin:8px 0 0 18px}
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="pill" aria-label="Support">Support</div>
+    <h1>Support & Contact</h1>
+    <p class="subtitle">If you have any issues or suggestions, reach out — we usually respond within 2 business days.</p>
+
+    <section class="grid" aria-label="Support content">
+      <div class="row">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kircomp1980@gmail.com">kircomp1980@gmail.com</a></p>
+        <p>When writing, please include your iOS version and a short description of the issue.</p>
+        <a class="btn" href="mailto:kircomp1980@gmail.com?subject=App%20Support">Email Support</a>
+      </div>
+
+      <div class="row">
+        <h2>FAQ</h2>
+        <ul>
+          <li><strong>No data sync?</strong> Check your internet connection and reopen the app.</li>
+          <li><strong>Crashes on launch?</strong> Reinstall the app and restart your device; if it persists, contact us.</li>
+          <li><strong>Feature request?</strong> Send an email with the subject “Feature request”.</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <h2>Privacy</h2>
+        <p>We only collect the minimal data required for the app to operate. Personal data is not sold to third parties. For removal requests, email <a href="mailto:kircomp1980@gmail.com">kircomp1980@gmail.com</a>.</p>
+      </div>
+
+      <div class="row">
+        <h2>Legal</h2>
+        <p>© {year} App Owner. All rights reserved.</p>
+      </div>
+    </section>
+
+    <footer>
+      Built with a simple static page (HTML + CSS). This page is accessible and lightweight.
+    </footer>
+  </main>
+<script>
+  // Insert current year
+  document.querySelectorAll('.row:last-of-type p').forEach(p=>{
+    p.innerHTML = p.innerHTML.replace('{year}', new Date().getFullYear());
+  });
+</script>
+</body>
+</html>
